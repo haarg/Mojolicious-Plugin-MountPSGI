@@ -8,7 +8,7 @@ use Test::Mojo;
 
 my $script = 't/script/formdata.psgi';
 
-subtest 'multipart' => sub {
+subtest 'single part' => sub {
   my $app = Mojolicious->new;
   $app->plugin(MountPSGI => { '/' => $script });
   my $t = Test::Mojo->new($app);
